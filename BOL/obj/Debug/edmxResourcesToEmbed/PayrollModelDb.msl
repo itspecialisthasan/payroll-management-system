@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="payroll_dbModelStoreContainer" CdmEntityContainer="payroll_dbEntities">
+    <EntitySetMapping Name="tbl_bankdetails">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_bankdetails">
+        <MappingFragment StoreEntitySet="tbl_bankdetails">
+          <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+          <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+          <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+          <ScalarProperty Name="branch_code" ColumnName="branch_code" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="currency" ColumnName="currency" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_department">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_department">
+        <MappingFragment StoreEntitySet="tbl_department">
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+          <ScalarProperty Name="dept_strenght" ColumnName="dept_strenght" />
+          <ScalarProperty Name="dept_otrates" ColumnName="dept_otrates" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_designation">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_designation">
+        <MappingFragment StoreEntitySet="tbl_designation">
+          <ScalarProperty Name="desig_id" ColumnName="desig_id" />
+          <ScalarProperty Name="desig_name" ColumnName="desig_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_employee">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_employee">
+        <MappingFragment StoreEntitySet="tbl_employee">
+          <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+          <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+          <ScalarProperty Name="emp_father_name" ColumnName="emp_father_name" />
+          <ScalarProperty Name="emp_address" ColumnName="emp_address" />
+          <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+          <ScalarProperty Name="emp_mobile_no" ColumnName="emp_mobile_no" />
+          <ScalarProperty Name="emp_nic" ColumnName="emp_nic" />
+          <ScalarProperty Name="nationality_id" ColumnName="nationality_id" />
+          <ScalarProperty Name="emp_dob" ColumnName="emp_dob" />
+          <ScalarProperty Name="emp_age" ColumnName="emp_age" />
+          <ScalarProperty Name="emp_martial_status" ColumnName="emp_martial_status" />
+          <ScalarProperty Name="religion_id" ColumnName="religion_id" />
+          <ScalarProperty Name="emp_gender" ColumnName="emp_gender" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="sdept_id" ColumnName="sdept_id" />
+          <ScalarProperty Name="desig_id" ColumnName="desig_id" />
+          <ScalarProperty Name="tg_id" ColumnName="tg_id" />
+          <ScalarProperty Name="emp_type" ColumnName="emp_type" />
+          <ScalarProperty Name="emp_appt_date" ColumnName="emp_appt_date" />
+          <ScalarProperty Name="emp_salary" ColumnName="emp_salary" />
+          <ScalarProperty Name="emp_wage_cat" ColumnName="emp_wage_cat" />
+          <ScalarProperty Name="time_id" ColumnName="time_id" />
+          <ScalarProperty Name="emp_restday" ColumnName="emp_restday" />
+          <ScalarProperty Name="emp_reportto" ColumnName="emp_reportto" />
+          <ScalarProperty Name="emp_contract_service" ColumnName="emp_contract_service" />
+          <ScalarProperty Name="emp_ot" ColumnName="emp_ot" />
+          <ScalarProperty Name="emp_onshift" ColumnName="emp_onshift" />
+          <ScalarProperty Name="emp_colony" ColumnName="emp_colony" />
+          <ScalarProperty Name="emp_inst_type" ColumnName="emp_inst_type" />
+          <ScalarProperty Name="emp_inst_title" ColumnName="emp_inst_title" />
+          <ScalarProperty Name="emp_inst_name" ColumnName="emp_inst_name" />
+          <ScalarProperty Name="emp_inst_passing_g" ColumnName="emp_inst_passing_g" />
+          <ScalarProperty Name="emp_inst_passing_yr" ColumnName="emp_inst_passing_yr" />
+          <ScalarProperty Name="emp_last_company" ColumnName="emp_last_company" />
+          <ScalarProperty Name="emp_last_position" ColumnName="emp_last_position" />
+          <ScalarProperty Name="emp_experince" ColumnName="emp_experince" />
+          <ScalarProperty Name="emp_last_salary" ColumnName="emp_last_salary" />
+          <ScalarProperty Name="health_id" ColumnName="health_id" />
+          <ScalarProperty Name="veh_id" ColumnName="veh_id" />
+          <ScalarProperty Name="emp_incometax" ColumnName="emp_incometax" />
+          <ScalarProperty Name="emp_ntn_no" ColumnName="emp_ntn_no" />
+          <ScalarProperty Name="emp_eobi_no" ColumnName="emp_eobi_no" />
+          <ScalarProperty Name="emp_sessi_no" ColumnName="emp_sessi_no" />
+          <ScalarProperty Name="emp_gi_no" ColumnName="emp_gi_no" />
+          <ScalarProperty Name="emp_graduity" ColumnName="emp_graduity" />
+          <ScalarProperty Name="emp_pf" ColumnName="emp_pf" />
+          <ScalarProperty Name="emp_ref_no" ColumnName="emp_ref_no" />
+          <ScalarProperty Name="emp_ref_name" ColumnName="emp_ref_name" />
+          <ScalarProperty Name="emp_ref_mob" ColumnName="emp_ref_mob" />
+          <ScalarProperty Name="emp_ref_email" ColumnName="emp_ref_email" />
+          <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+          <ScalarProperty Name="emp_acct_no" ColumnName="emp_acct_no" />
+          <ScalarProperty Name="emp_acct_name" ColumnName="emp_acct_name" />
+          <ScalarProperty Name="emp_iban_no" ColumnName="emp_iban_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_healthinsurance">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_healthinsurance">
+        <MappingFragment StoreEntitySet="tbl_healthinsurance">
+          <ScalarProperty Name="health_id" ColumnName="health_id" />
+          <ScalarProperty Name="health_plan_name" ColumnName="health_plan_name" />
+          <ScalarProperty Name="health_plan_amount" ColumnName="health_plan_amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_holiday">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_holiday">
+        <MappingFragment StoreEntitySet="tbl_holiday">
+          <ScalarProperty Name="h_id" ColumnName="h_id" />
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="h_date" ColumnName="h_date" />
+          <ScalarProperty Name="h_otrates" ColumnName="h_otrates" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_millUnit">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_millUnit">
+        <MappingFragment StoreEntitySet="tbl_millUnit">
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_nationality">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_nationality">
+        <MappingFragment StoreEntitySet="tbl_nationality">
+          <ScalarProperty Name="nationality_id" ColumnName="nationality_id" />
+          <ScalarProperty Name="nationality_name" ColumnName="nationality_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_reasons">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_reasons">
+        <MappingFragment StoreEntitySet="tbl_reasons">
+          <ScalarProperty Name="reason_id" ColumnName="reason_id" />
+          <ScalarProperty Name="reason_name" ColumnName="reason_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_religion">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_religion">
+        <MappingFragment StoreEntitySet="tbl_religion">
+          <ScalarProperty Name="religion_id" ColumnName="religion_id" />
+          <ScalarProperty Name="religion_name" ColumnName="religion_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_subdepartment">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_subdepartment">
+        <MappingFragment StoreEntitySet="tbl_subdepartment">
+          <ScalarProperty Name="sdept_id" ColumnName="sdept_id" />
+          <ScalarProperty Name="sdept_name" ColumnName="sdept_name" />
+          <ScalarProperty Name="sdept_strenght" ColumnName="sdept_strenght" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_terminal">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_terminal">
+        <MappingFragment StoreEntitySet="tbl_terminal">
+          <ScalarProperty Name="terminal_id" ColumnName="terminal_id" />
+          <ScalarProperty Name="terminal_name" ColumnName="terminal_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_timing">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_timing">
+        <MappingFragment StoreEntitySet="tbl_timing">
+          <ScalarProperty Name="time_id" ColumnName="time_id" />
+          <ScalarProperty Name="timing" ColumnName="timing" />
+          <ScalarProperty Name="timefrom" ColumnName="timefrom" />
+          <ScalarProperty Name="timeupto" ColumnName="timeupto" />
+          <ScalarProperty Name="outupto" ColumnName="outupto" />
+          <ScalarProperty Name="dutyhours" ColumnName="dutyhours" />
+          <ScalarProperty Name="shifttype" ColumnName="shifttype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_timingGroup">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_timingGroup">
+        <MappingFragment StoreEntitySet="tbl_timingGroup">
+          <ScalarProperty Name="tg_id" ColumnName="tg_id" />
+          <ScalarProperty Name="tg_name" ColumnName="tg_name" />
+          <ScalarProperty Name="tg_shifttype" ColumnName="tg_shifttype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_user">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_user">
+        <MappingFragment StoreEntitySet="tbl_user">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="pasword" ColumnName="pasword" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_vehicledetention">
+      <EntityTypeMapping TypeName="payroll_dbModel.tbl_vehicledetention">
+        <MappingFragment StoreEntitySet="tbl_vehicledetention">
+          <ScalarProperty Name="veh_id" ColumnName="veh_id" />
+          <ScalarProperty Name="veh_type_name" ColumnName="veh_type_name" />
+          <ScalarProperty Name="veh_type_amount" ColumnName="veh_type_amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

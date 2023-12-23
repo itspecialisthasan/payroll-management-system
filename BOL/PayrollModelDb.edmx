@@ -1,0 +1,1041 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="payroll_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbl_bankdetails">
+          <Key>
+            <PropertyRef Name="bank_id" />
+          </Key>
+          <Property Name="bank_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bank_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="branch_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="branch_code" Type="int" Nullable="false" />
+          <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="country" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="currency" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_department">
+          <Key>
+            <PropertyRef Name="dept_id" />
+          </Key>
+          <Property Name="dept_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dept_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dept_strenght" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dept_otrates" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="unit_id" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_designation">
+          <Key>
+            <PropertyRef Name="desig_id" />
+          </Key>
+          <Property Name="desig_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="desig_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_employee">
+          <Key>
+            <PropertyRef Name="emp_id" />
+          </Key>
+          <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="emp_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_father_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_mobile_no" Type="int" Nullable="false" />
+          <Property Name="emp_nic" Type="int" Nullable="false" />
+          <Property Name="nationality_id" Type="int" />
+          <Property Name="emp_dob" Type="date" />
+          <Property Name="emp_age" Type="int" Nullable="false" />
+          <Property Name="emp_martial_status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="religion_id" Type="int" />
+          <Property Name="emp_gender" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="unit_id" Type="int" />
+          <Property Name="dept_id" Type="int" />
+          <Property Name="sdept_id" Type="int" />
+          <Property Name="desig_id" Type="int" />
+          <Property Name="tg_id" Type="int" />
+          <Property Name="emp_type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_appt_date" Type="date" />
+          <Property Name="emp_salary" Type="int" Nullable="false" />
+          <Property Name="emp_wage_cat" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="time_id" Type="int" />
+          <Property Name="emp_restday" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_reportto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_contract_service" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_ot" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_onshift" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_colony" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_inst_type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_inst_title" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_inst_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_inst_passing_g" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_inst_passing_yr" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_last_company" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_last_position" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_experince" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_last_salary" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="health_id" Type="int" />
+          <Property Name="veh_id" Type="int" />
+          <Property Name="emp_incometax" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_ntn_no" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_eobi_no" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_sessi_no" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_gi_no" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_graduity" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_pf" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_ref_no" Type="int" />
+          <Property Name="emp_ref_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_ref_mob" Type="int" Nullable="false" />
+          <Property Name="emp_ref_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="bank_id" Type="int" />
+          <Property Name="emp_acct_no" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_acct_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="emp_iban_no" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_healthinsurance">
+          <Key>
+            <PropertyRef Name="health_id" />
+          </Key>
+          <Property Name="health_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="health_plan_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="health_plan_amount" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_holiday">
+          <Key>
+            <PropertyRef Name="h_id" />
+          </Key>
+          <Property Name="h_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="h_name" Type="varchar" MaxLength="50" />
+          <Property Name="h_date" Type="date" />
+          <Property Name="h_otrates" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_millUnit">
+          <Key>
+            <PropertyRef Name="unit_id" />
+          </Key>
+          <Property Name="unit_id" Type="int" Nullable="false" />
+          <Property Name="unit_name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_nationality">
+          <Key>
+            <PropertyRef Name="nationality_id" />
+          </Key>
+          <Property Name="nationality_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nationality_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_reasons">
+          <Key>
+            <PropertyRef Name="reason_id" />
+          </Key>
+          <Property Name="reason_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="reason_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_religion">
+          <Key>
+            <PropertyRef Name="religion_id" />
+          </Key>
+          <Property Name="religion_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="religion_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_subdepartment">
+          <Key>
+            <PropertyRef Name="sdept_id" />
+          </Key>
+          <Property Name="sdept_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sdept_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sdept_strenght" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dept_id" Type="int" />
+        </EntityType>
+        <EntityType Name="tbl_terminal">
+          <Key>
+            <PropertyRef Name="terminal_id" />
+          </Key>
+          <Property Name="terminal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="terminal_name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_timing">
+          <Key>
+            <PropertyRef Name="time_id" />
+          </Key>
+          <Property Name="time_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="timing" Type="varchar" MaxLength="50" />
+          <Property Name="timefrom" Type="varchar" MaxLength="50" />
+          <Property Name="timeupto" Type="varchar" MaxLength="50" />
+          <Property Name="outupto" Type="varchar" MaxLength="50" />
+          <Property Name="dutyhours" Type="varchar" MaxLength="50" />
+          <Property Name="shifttype" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tbl_timingGroup">
+          <Key>
+            <PropertyRef Name="tg_id" />
+          </Key>
+          <Property Name="tg_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tg_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="tg_shifttype" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_user">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="pasword" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="role" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_vehicledetention">
+          <Key>
+            <PropertyRef Name="veh_id" />
+          </Key>
+          <Property Name="veh_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="veh_type_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="veh_type_amount" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_DEPART_ID">
+          <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_department">
+              <PropertyRef Name="dept_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="dept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEPT_ID">
+          <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_subdepartment" Type="Self.tbl_subdepartment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_department">
+              <PropertyRef Name="dept_id" />
+            </Principal>
+            <Dependent Role="tbl_subdepartment">
+              <PropertyRef Name="dept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESIGNATION_ID">
+          <End Role="tbl_designation" Type="Self.tbl_designation" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_designation">
+              <PropertyRef Name="desig_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="desig_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HEALTH_ID">
+          <End Role="tbl_healthinsurance" Type="Self.tbl_healthinsurance" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_healthinsurance">
+              <PropertyRef Name="health_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="health_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUNIT_ID">
+          <End Role="tbl_millUnit" Type="Self.tbl_millUnit" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_millUnit">
+              <PropertyRef Name="unit_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NATIONALITY_ID">
+          <End Role="tbl_nationality" Type="Self.tbl_nationality" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_nationality">
+              <PropertyRef Name="nationality_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="nationality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SDEPARTT_ID">
+          <End Role="tbl_subdepartment" Type="Self.tbl_subdepartment" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_subdepartment">
+              <PropertyRef Name="sdept_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="sdept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIMING_ID">
+          <End Role="tbl_timing" Type="Self.tbl_timing" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_timing">
+              <PropertyRef Name="time_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="time_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIMINGGROUP_ID">
+          <End Role="tbl_timingGroup" Type="Self.tbl_timingGroup" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_timingGroup">
+              <PropertyRef Name="tg_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="tg_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UNIT_ID">
+          <End Role="tbl_millUnit" Type="Self.tbl_millUnit" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_millUnit">
+              <PropertyRef Name="unit_id" />
+            </Principal>
+            <Dependent Role="tbl_department">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vehicle_ID">
+          <End Role="tbl_vehicledetention" Type="Self.tbl_vehicledetention" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_vehicledetention">
+              <PropertyRef Name="veh_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="veh_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="payroll_dbModelStoreContainer">
+          <EntitySet Name="tbl_bankdetails" EntityType="Self.tbl_bankdetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_department" EntityType="Self.tbl_department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_designation" EntityType="Self.tbl_designation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_employee" EntityType="Self.tbl_employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_healthinsurance" EntityType="Self.tbl_healthinsurance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_holiday" EntityType="Self.tbl_holiday" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_millUnit" EntityType="Self.tbl_millUnit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_nationality" EntityType="Self.tbl_nationality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_reasons" EntityType="Self.tbl_reasons" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_religion" EntityType="Self.tbl_religion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_subdepartment" EntityType="Self.tbl_subdepartment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_terminal" EntityType="Self.tbl_terminal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_timing" EntityType="Self.tbl_timing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_timingGroup" EntityType="Self.tbl_timingGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_user" EntityType="Self.tbl_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_vehicledetention" EntityType="Self.tbl_vehicledetention" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DEPART_ID" Association="Self.FK_DEPART_ID">
+            <End Role="tbl_department" EntitySet="tbl_department" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEPT_ID" Association="Self.FK_DEPT_ID">
+            <End Role="tbl_department" EntitySet="tbl_department" />
+            <End Role="tbl_subdepartment" EntitySet="tbl_subdepartment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESIGNATION_ID" Association="Self.FK_DESIGNATION_ID">
+            <End Role="tbl_designation" EntitySet="tbl_designation" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HEALTH_ID" Association="Self.FK_HEALTH_ID">
+            <End Role="tbl_healthinsurance" EntitySet="tbl_healthinsurance" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUNIT_ID" Association="Self.FK_MUNIT_ID">
+            <End Role="tbl_millUnit" EntitySet="tbl_millUnit" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NATIONALITY_ID" Association="Self.FK_NATIONALITY_ID">
+            <End Role="tbl_nationality" EntitySet="tbl_nationality" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SDEPARTT_ID" Association="Self.FK_SDEPARTT_ID">
+            <End Role="tbl_subdepartment" EntitySet="tbl_subdepartment" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIMING_ID" Association="Self.FK_TIMING_ID">
+            <End Role="tbl_timing" EntitySet="tbl_timing" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIMINGGROUP_ID" Association="Self.FK_TIMINGGROUP_ID">
+            <End Role="tbl_timingGroup" EntitySet="tbl_timingGroup" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UNIT_ID" Association="Self.FK_UNIT_ID">
+            <End Role="tbl_millUnit" EntitySet="tbl_millUnit" />
+            <End Role="tbl_department" EntitySet="tbl_department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vehicle_ID" Association="Self.FK_vehicle_ID">
+            <End Role="tbl_vehicledetention" EntitySet="tbl_vehicledetention" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="payroll_dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbl_bankdetails">
+          <Key>
+            <PropertyRef Name="bank_id" />
+          </Key>
+          <Property Name="bank_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bank_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="branch_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="branch_code" Type="Int32" Nullable="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_department">
+          <Key>
+            <PropertyRef Name="dept_id" />
+          </Key>
+          <Property Name="dept_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dept_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dept_strenght" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dept_otrates" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="unit_id" Type="Int32" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_DEPART_ID" FromRole="tbl_department" ToRole="tbl_employee" />
+          <NavigationProperty Name="tbl_subdepartment" Relationship="Self.FK_DEPT_ID" FromRole="tbl_department" ToRole="tbl_subdepartment" />
+          <NavigationProperty Name="tbl_millUnit" Relationship="Self.FK_UNIT_ID" FromRole="tbl_department" ToRole="tbl_millUnit" />
+        </EntityType>
+        <EntityType Name="tbl_designation">
+          <Key>
+            <PropertyRef Name="desig_id" />
+          </Key>
+          <Property Name="desig_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="desig_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_DESIGNATION_ID" FromRole="tbl_designation" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_employee">
+          <Key>
+            <PropertyRef Name="emp_id" />
+          </Key>
+          <Property Name="emp_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="emp_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_father_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_mobile_no" Type="Int32" Nullable="false" />
+          <Property Name="emp_nic" Type="Int32" Nullable="false" />
+          <Property Name="nationality_id" Type="Int32" />
+          <Property Name="emp_dob" Type="DateTime" Precision="0" />
+          <Property Name="emp_age" Type="Int32" Nullable="false" />
+          <Property Name="emp_martial_status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="religion_id" Type="Int32" />
+          <Property Name="emp_gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="unit_id" Type="Int32" />
+          <Property Name="dept_id" Type="Int32" />
+          <Property Name="sdept_id" Type="Int32" />
+          <Property Name="desig_id" Type="Int32" />
+          <Property Name="tg_id" Type="Int32" />
+          <Property Name="emp_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_appt_date" Type="DateTime" Precision="0" />
+          <Property Name="emp_salary" Type="Int32" Nullable="false" />
+          <Property Name="emp_wage_cat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="time_id" Type="Int32" />
+          <Property Name="emp_restday" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_reportto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_contract_service" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_ot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_onshift" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_colony" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_inst_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_inst_title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_inst_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_inst_passing_g" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_inst_passing_yr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_last_company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_last_position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_experince" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_last_salary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="health_id" Type="Int32" />
+          <Property Name="veh_id" Type="Int32" />
+          <Property Name="emp_incometax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_ntn_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_eobi_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_sessi_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_gi_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_graduity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_pf" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_ref_no" Type="Int32" />
+          <Property Name="emp_ref_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_ref_mob" Type="Int32" Nullable="false" />
+          <Property Name="emp_ref_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="bank_id" Type="Int32" />
+          <Property Name="emp_acct_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_acct_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_iban_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_department" Relationship="Self.FK_DEPART_ID" FromRole="tbl_employee" ToRole="tbl_department" />
+          <NavigationProperty Name="tbl_designation" Relationship="Self.FK_DESIGNATION_ID" FromRole="tbl_employee" ToRole="tbl_designation" />
+          <NavigationProperty Name="tbl_healthinsurance" Relationship="Self.FK_HEALTH_ID" FromRole="tbl_employee" ToRole="tbl_healthinsurance" />
+          <NavigationProperty Name="tbl_millUnit" Relationship="Self.FK_MUNIT_ID" FromRole="tbl_employee" ToRole="tbl_millUnit" />
+          <NavigationProperty Name="tbl_nationality" Relationship="Self.FK_NATIONALITY_ID" FromRole="tbl_employee" ToRole="tbl_nationality" />
+          <NavigationProperty Name="tbl_subdepartment" Relationship="Self.FK_SDEPARTT_ID" FromRole="tbl_employee" ToRole="tbl_subdepartment" />
+          <NavigationProperty Name="tbl_timing" Relationship="Self.FK_TIMING_ID" FromRole="tbl_employee" ToRole="tbl_timing" />
+          <NavigationProperty Name="tbl_timingGroup" Relationship="Self.FK_TIMINGGROUP_ID" FromRole="tbl_employee" ToRole="tbl_timingGroup" />
+          <NavigationProperty Name="tbl_vehicledetention" Relationship="Self.FK_vehicle_ID" FromRole="tbl_employee" ToRole="tbl_vehicledetention" />
+        </EntityType>
+        <EntityType Name="tbl_healthinsurance">
+          <Key>
+            <PropertyRef Name="health_id" />
+          </Key>
+          <Property Name="health_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="health_plan_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="health_plan_amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_HEALTH_ID" FromRole="tbl_healthinsurance" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_holiday">
+          <Key>
+            <PropertyRef Name="h_id" />
+          </Key>
+          <Property Name="h_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="h_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="h_date" Type="DateTime" Precision="0" />
+          <Property Name="h_otrates" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbl_millUnit">
+          <Key>
+            <PropertyRef Name="unit_id" />
+          </Key>
+          <Property Name="unit_id" Type="Int32" Nullable="false" />
+          <Property Name="unit_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_department" Relationship="Self.FK_UNIT_ID" FromRole="tbl_millUnit" ToRole="tbl_department" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_MUNIT_ID" FromRole="tbl_millUnit" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_nationality">
+          <Key>
+            <PropertyRef Name="nationality_id" />
+          </Key>
+          <Property Name="nationality_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nationality_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_NATIONALITY_ID" FromRole="tbl_nationality" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_reasons">
+          <Key>
+            <PropertyRef Name="reason_id" />
+          </Key>
+          <Property Name="reason_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reason_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_religion">
+          <Key>
+            <PropertyRef Name="religion_id" />
+          </Key>
+          <Property Name="religion_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="religion_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_subdepartment">
+          <Key>
+            <PropertyRef Name="sdept_id" />
+          </Key>
+          <Property Name="sdept_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sdept_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sdept_strenght" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dept_id" Type="Int32" />
+          <NavigationProperty Name="tbl_department" Relationship="Self.FK_DEPT_ID" FromRole="tbl_subdepartment" ToRole="tbl_department" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_SDEPARTT_ID" FromRole="tbl_subdepartment" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_terminal">
+          <Key>
+            <PropertyRef Name="terminal_id" />
+          </Key>
+          <Property Name="terminal_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="terminal_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_timing">
+          <Key>
+            <PropertyRef Name="time_id" />
+          </Key>
+          <Property Name="time_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="timing" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="timefrom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="timeupto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="outupto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dutyhours" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="shifttype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_TIMING_ID" FromRole="tbl_timing" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_timingGroup">
+          <Key>
+            <PropertyRef Name="tg_id" />
+          </Key>
+          <Property Name="tg_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tg_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="tg_shifttype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_TIMINGGROUP_ID" FromRole="tbl_timingGroup" ToRole="tbl_employee" />
+        </EntityType>
+        <EntityType Name="tbl_user">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pasword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_vehicledetention">
+          <Key>
+            <PropertyRef Name="veh_id" />
+          </Key>
+          <Property Name="veh_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="veh_type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="veh_type_amount" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbl_employee" Relationship="Self.FK_vehicle_ID" FromRole="tbl_vehicledetention" ToRole="tbl_employee" />
+        </EntityType>
+        <Association Name="FK_DEPART_ID">
+          <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_department">
+              <PropertyRef Name="dept_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="dept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DEPT_ID">
+          <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_subdepartment" Type="Self.tbl_subdepartment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_department">
+              <PropertyRef Name="dept_id" />
+            </Principal>
+            <Dependent Role="tbl_subdepartment">
+              <PropertyRef Name="dept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UNIT_ID">
+          <End Role="tbl_millUnit" Type="Self.tbl_millUnit" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_millUnit">
+              <PropertyRef Name="unit_id" />
+            </Principal>
+            <Dependent Role="tbl_department">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DESIGNATION_ID">
+          <End Role="tbl_designation" Type="Self.tbl_designation" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_designation">
+              <PropertyRef Name="desig_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="desig_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HEALTH_ID">
+          <End Role="tbl_healthinsurance" Type="Self.tbl_healthinsurance" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_healthinsurance">
+              <PropertyRef Name="health_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="health_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MUNIT_ID">
+          <End Role="tbl_millUnit" Type="Self.tbl_millUnit" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_millUnit">
+              <PropertyRef Name="unit_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="unit_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_NATIONALITY_ID">
+          <End Role="tbl_nationality" Type="Self.tbl_nationality" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_nationality">
+              <PropertyRef Name="nationality_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="nationality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SDEPARTT_ID">
+          <End Role="tbl_subdepartment" Type="Self.tbl_subdepartment" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_subdepartment">
+              <PropertyRef Name="sdept_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="sdept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIMING_ID">
+          <End Role="tbl_timing" Type="Self.tbl_timing" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_timing">
+              <PropertyRef Name="time_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="time_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TIMINGGROUP_ID">
+          <End Role="tbl_timingGroup" Type="Self.tbl_timingGroup" Multiplicity="0..1" />
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_timingGroup">
+              <PropertyRef Name="tg_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="tg_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_vehicle_ID">
+          <End Role="tbl_vehicledetention" Type="Self.tbl_vehicledetention" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_vehicledetention">
+              <PropertyRef Name="veh_id" />
+            </Principal>
+            <Dependent Role="tbl_employee">
+              <PropertyRef Name="veh_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="payroll_dbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_bankdetails" EntityType="Self.tbl_bankdetails" />
+          <EntitySet Name="tbl_department" EntityType="Self.tbl_department" />
+          <EntitySet Name="tbl_designation" EntityType="Self.tbl_designation" />
+          <EntitySet Name="tbl_employee" EntityType="Self.tbl_employee" />
+          <EntitySet Name="tbl_healthinsurance" EntityType="Self.tbl_healthinsurance" />
+          <EntitySet Name="tbl_holiday" EntityType="Self.tbl_holiday" />
+          <EntitySet Name="tbl_millUnit" EntityType="Self.tbl_millUnit" />
+          <EntitySet Name="tbl_nationality" EntityType="Self.tbl_nationality" />
+          <EntitySet Name="tbl_reasons" EntityType="Self.tbl_reasons" />
+          <EntitySet Name="tbl_religion" EntityType="Self.tbl_religion" />
+          <EntitySet Name="tbl_subdepartment" EntityType="Self.tbl_subdepartment" />
+          <EntitySet Name="tbl_terminal" EntityType="Self.tbl_terminal" />
+          <EntitySet Name="tbl_timing" EntityType="Self.tbl_timing" />
+          <EntitySet Name="tbl_timingGroup" EntityType="Self.tbl_timingGroup" />
+          <EntitySet Name="tbl_user" EntityType="Self.tbl_user" />
+          <EntitySet Name="tbl_vehicledetention" EntityType="Self.tbl_vehicledetention" />
+          <AssociationSet Name="FK_DEPART_ID" Association="Self.FK_DEPART_ID">
+            <End Role="tbl_department" EntitySet="tbl_department" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DEPT_ID" Association="Self.FK_DEPT_ID">
+            <End Role="tbl_department" EntitySet="tbl_department" />
+            <End Role="tbl_subdepartment" EntitySet="tbl_subdepartment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UNIT_ID" Association="Self.FK_UNIT_ID">
+            <End Role="tbl_millUnit" EntitySet="tbl_millUnit" />
+            <End Role="tbl_department" EntitySet="tbl_department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DESIGNATION_ID" Association="Self.FK_DESIGNATION_ID">
+            <End Role="tbl_designation" EntitySet="tbl_designation" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HEALTH_ID" Association="Self.FK_HEALTH_ID">
+            <End Role="tbl_healthinsurance" EntitySet="tbl_healthinsurance" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MUNIT_ID" Association="Self.FK_MUNIT_ID">
+            <End Role="tbl_millUnit" EntitySet="tbl_millUnit" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_NATIONALITY_ID" Association="Self.FK_NATIONALITY_ID">
+            <End Role="tbl_nationality" EntitySet="tbl_nationality" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SDEPARTT_ID" Association="Self.FK_SDEPARTT_ID">
+            <End Role="tbl_subdepartment" EntitySet="tbl_subdepartment" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIMING_ID" Association="Self.FK_TIMING_ID">
+            <End Role="tbl_timing" EntitySet="tbl_timing" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TIMINGGROUP_ID" Association="Self.FK_TIMINGGROUP_ID">
+            <End Role="tbl_timingGroup" EntitySet="tbl_timingGroup" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_vehicle_ID" Association="Self.FK_vehicle_ID">
+            <End Role="tbl_vehicledetention" EntitySet="tbl_vehicledetention" />
+            <End Role="tbl_employee" EntitySet="tbl_employee" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="payroll_dbModelStoreContainer" CdmEntityContainer="payroll_dbEntities">
+          <EntitySetMapping Name="tbl_bankdetails">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_bankdetails">
+              <MappingFragment StoreEntitySet="tbl_bankdetails">
+                <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+                <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+                <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+                <ScalarProperty Name="branch_code" ColumnName="branch_code" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_department">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_department">
+              <MappingFragment StoreEntitySet="tbl_department">
+                <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+                <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+                <ScalarProperty Name="dept_strenght" ColumnName="dept_strenght" />
+                <ScalarProperty Name="dept_otrates" ColumnName="dept_otrates" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_designation">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_designation">
+              <MappingFragment StoreEntitySet="tbl_designation">
+                <ScalarProperty Name="desig_id" ColumnName="desig_id" />
+                <ScalarProperty Name="desig_name" ColumnName="desig_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_employee">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_employee">
+              <MappingFragment StoreEntitySet="tbl_employee">
+                <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+                <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+                <ScalarProperty Name="emp_father_name" ColumnName="emp_father_name" />
+                <ScalarProperty Name="emp_address" ColumnName="emp_address" />
+                <ScalarProperty Name="emp_email" ColumnName="emp_email" />
+                <ScalarProperty Name="emp_mobile_no" ColumnName="emp_mobile_no" />
+                <ScalarProperty Name="emp_nic" ColumnName="emp_nic" />
+                <ScalarProperty Name="nationality_id" ColumnName="nationality_id" />
+                <ScalarProperty Name="emp_dob" ColumnName="emp_dob" />
+                <ScalarProperty Name="emp_age" ColumnName="emp_age" />
+                <ScalarProperty Name="emp_martial_status" ColumnName="emp_martial_status" />
+                <ScalarProperty Name="religion_id" ColumnName="religion_id" />
+                <ScalarProperty Name="emp_gender" ColumnName="emp_gender" />
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+                <ScalarProperty Name="sdept_id" ColumnName="sdept_id" />
+                <ScalarProperty Name="desig_id" ColumnName="desig_id" />
+                <ScalarProperty Name="tg_id" ColumnName="tg_id" />
+                <ScalarProperty Name="emp_type" ColumnName="emp_type" />
+                <ScalarProperty Name="emp_appt_date" ColumnName="emp_appt_date" />
+                <ScalarProperty Name="emp_salary" ColumnName="emp_salary" />
+                <ScalarProperty Name="emp_wage_cat" ColumnName="emp_wage_cat" />
+                <ScalarProperty Name="time_id" ColumnName="time_id" />
+                <ScalarProperty Name="emp_restday" ColumnName="emp_restday" />
+                <ScalarProperty Name="emp_reportto" ColumnName="emp_reportto" />
+                <ScalarProperty Name="emp_contract_service" ColumnName="emp_contract_service" />
+                <ScalarProperty Name="emp_ot" ColumnName="emp_ot" />
+                <ScalarProperty Name="emp_onshift" ColumnName="emp_onshift" />
+                <ScalarProperty Name="emp_colony" ColumnName="emp_colony" />
+                <ScalarProperty Name="emp_inst_type" ColumnName="emp_inst_type" />
+                <ScalarProperty Name="emp_inst_title" ColumnName="emp_inst_title" />
+                <ScalarProperty Name="emp_inst_name" ColumnName="emp_inst_name" />
+                <ScalarProperty Name="emp_inst_passing_g" ColumnName="emp_inst_passing_g" />
+                <ScalarProperty Name="emp_inst_passing_yr" ColumnName="emp_inst_passing_yr" />
+                <ScalarProperty Name="emp_last_company" ColumnName="emp_last_company" />
+                <ScalarProperty Name="emp_last_position" ColumnName="emp_last_position" />
+                <ScalarProperty Name="emp_experince" ColumnName="emp_experince" />
+                <ScalarProperty Name="emp_last_salary" ColumnName="emp_last_salary" />
+                <ScalarProperty Name="health_id" ColumnName="health_id" />
+                <ScalarProperty Name="veh_id" ColumnName="veh_id" />
+                <ScalarProperty Name="emp_incometax" ColumnName="emp_incometax" />
+                <ScalarProperty Name="emp_ntn_no" ColumnName="emp_ntn_no" />
+                <ScalarProperty Name="emp_eobi_no" ColumnName="emp_eobi_no" />
+                <ScalarProperty Name="emp_sessi_no" ColumnName="emp_sessi_no" />
+                <ScalarProperty Name="emp_gi_no" ColumnName="emp_gi_no" />
+                <ScalarProperty Name="emp_graduity" ColumnName="emp_graduity" />
+                <ScalarProperty Name="emp_pf" ColumnName="emp_pf" />
+                <ScalarProperty Name="emp_ref_no" ColumnName="emp_ref_no" />
+                <ScalarProperty Name="emp_ref_name" ColumnName="emp_ref_name" />
+                <ScalarProperty Name="emp_ref_mob" ColumnName="emp_ref_mob" />
+                <ScalarProperty Name="emp_ref_email" ColumnName="emp_ref_email" />
+                <ScalarProperty Name="bank_id" ColumnName="bank_id" />
+                <ScalarProperty Name="emp_acct_no" ColumnName="emp_acct_no" />
+                <ScalarProperty Name="emp_acct_name" ColumnName="emp_acct_name" />
+                <ScalarProperty Name="emp_iban_no" ColumnName="emp_iban_no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_healthinsurance">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_healthinsurance">
+              <MappingFragment StoreEntitySet="tbl_healthinsurance">
+                <ScalarProperty Name="health_id" ColumnName="health_id" />
+                <ScalarProperty Name="health_plan_name" ColumnName="health_plan_name" />
+                <ScalarProperty Name="health_plan_amount" ColumnName="health_plan_amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_holiday">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_holiday">
+              <MappingFragment StoreEntitySet="tbl_holiday">
+                <ScalarProperty Name="h_id" ColumnName="h_id" />
+                <ScalarProperty Name="h_name" ColumnName="h_name" />
+                <ScalarProperty Name="h_date" ColumnName="h_date" />
+                <ScalarProperty Name="h_otrates" ColumnName="h_otrates" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_millUnit">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_millUnit">
+              <MappingFragment StoreEntitySet="tbl_millUnit">
+                <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+                <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_nationality">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_nationality">
+              <MappingFragment StoreEntitySet="tbl_nationality">
+                <ScalarProperty Name="nationality_id" ColumnName="nationality_id" />
+                <ScalarProperty Name="nationality_name" ColumnName="nationality_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_reasons">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_reasons">
+              <MappingFragment StoreEntitySet="tbl_reasons">
+                <ScalarProperty Name="reason_id" ColumnName="reason_id" />
+                <ScalarProperty Name="reason_name" ColumnName="reason_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_religion">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_religion">
+              <MappingFragment StoreEntitySet="tbl_religion">
+                <ScalarProperty Name="religion_id" ColumnName="religion_id" />
+                <ScalarProperty Name="religion_name" ColumnName="religion_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_subdepartment">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_subdepartment">
+              <MappingFragment StoreEntitySet="tbl_subdepartment">
+                <ScalarProperty Name="sdept_id" ColumnName="sdept_id" />
+                <ScalarProperty Name="sdept_name" ColumnName="sdept_name" />
+                <ScalarProperty Name="sdept_strenght" ColumnName="sdept_strenght" />
+                <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_terminal">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_terminal">
+              <MappingFragment StoreEntitySet="tbl_terminal">
+                <ScalarProperty Name="terminal_id" ColumnName="terminal_id" />
+                <ScalarProperty Name="terminal_name" ColumnName="terminal_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_timing">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_timing">
+              <MappingFragment StoreEntitySet="tbl_timing">
+                <ScalarProperty Name="time_id" ColumnName="time_id" />
+                <ScalarProperty Name="timing" ColumnName="timing" />
+                <ScalarProperty Name="timefrom" ColumnName="timefrom" />
+                <ScalarProperty Name="timeupto" ColumnName="timeupto" />
+                <ScalarProperty Name="outupto" ColumnName="outupto" />
+                <ScalarProperty Name="dutyhours" ColumnName="dutyhours" />
+                <ScalarProperty Name="shifttype" ColumnName="shifttype" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_timingGroup">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_timingGroup">
+              <MappingFragment StoreEntitySet="tbl_timingGroup">
+                <ScalarProperty Name="tg_id" ColumnName="tg_id" />
+                <ScalarProperty Name="tg_name" ColumnName="tg_name" />
+                <ScalarProperty Name="tg_shifttype" ColumnName="tg_shifttype" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_user">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_user">
+              <MappingFragment StoreEntitySet="tbl_user">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="pasword" ColumnName="pasword" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_vehicledetention">
+            <EntityTypeMapping TypeName="payroll_dbModel.tbl_vehicledetention">
+              <MappingFragment StoreEntitySet="tbl_vehicledetention">
+                <ScalarProperty Name="veh_id" ColumnName="veh_id" />
+                <ScalarProperty Name="veh_type_name" ColumnName="veh_type_name" />
+                <ScalarProperty Name="veh_type_amount" ColumnName="veh_type_amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

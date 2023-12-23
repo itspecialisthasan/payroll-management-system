@@ -1,0 +1,17 @@
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\DAL.dll.config
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\DAL.dll
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\DAL.pdb
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\BOL.dll
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\EntityFramework.dll
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\System.Data.SqlClient.dll
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\BOL.pdb
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\BOL.dll.config
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\EntityFramework.xml
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\dotNet\payroll_management_system\DAL\bin\Debug\System.Data.SqlClient.xml
+D:\Work\dotNet\payroll_management_system\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Work\dotNet\payroll_management_system\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Work\dotNet\payroll_management_system\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Work\dotNet\payroll_management_system\DAL\obj\Debug\DAL.dll
+D:\Work\dotNet\payroll_management_system\DAL\obj\Debug\DAL.pdb

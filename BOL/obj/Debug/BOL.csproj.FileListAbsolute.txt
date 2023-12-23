@@ -1,0 +1,14 @@
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\BOL.dll.config
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\BOL.dll
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\BOL.pdb
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\EntityFramework.dll
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\System.Data.SqlClient.dll
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\EntityFramework.xml
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Work\dotNet\payroll_management_system\BOL\bin\Debug\System.Data.SqlClient.xml
+D:\Work\dotNet\payroll_management_system\BOL\obj\Debug\BOL.csproj.AssemblyReference.cache
+D:\Work\dotNet\payroll_management_system\BOL\obj\Debug\BOL.csproj.CoreCompileInputs.cache
+D:\Work\dotNet\payroll_management_system\BOL\obj\Debug\BOL.csproj.CopyComplete
+D:\Work\dotNet\payroll_management_system\BOL\obj\Debug\BOL.dll
+D:\Work\dotNet\payroll_management_system\BOL\obj\Debug\BOL.pdb

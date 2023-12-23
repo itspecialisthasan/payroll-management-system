@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="payroll_dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_bankdetails">
+    <Key>
+      <PropertyRef Name="bank_id" />
+    </Key>
+    <Property Name="bank_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="bank_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="branch_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="branch_code" Type="int" Nullable="false" />
+    <Property Name="address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="country" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="currency" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_department">
+    <Key>
+      <PropertyRef Name="dept_id" />
+    </Key>
+    <Property Name="dept_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dept_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dept_strenght" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dept_otrates" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="unit_id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_designation">
+    <Key>
+      <PropertyRef Name="desig_id" />
+    </Key>
+    <Property Name="desig_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="desig_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_employee">
+    <Key>
+      <PropertyRef Name="emp_id" />
+    </Key>
+    <Property Name="emp_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="emp_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_father_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_mobile_no" Type="int" Nullable="false" />
+    <Property Name="emp_nic" Type="int" Nullable="false" />
+    <Property Name="nationality_id" Type="int" />
+    <Property Name="emp_dob" Type="date" />
+    <Property Name="emp_age" Type="int" Nullable="false" />
+    <Property Name="emp_martial_status" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="religion_id" Type="int" />
+    <Property Name="emp_gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="unit_id" Type="int" />
+    <Property Name="dept_id" Type="int" />
+    <Property Name="sdept_id" Type="int" />
+    <Property Name="desig_id" Type="int" />
+    <Property Name="tg_id" Type="int" />
+    <Property Name="emp_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_appt_date" Type="date" />
+    <Property Name="emp_salary" Type="int" Nullable="false" />
+    <Property Name="emp_wage_cat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="time_id" Type="int" />
+    <Property Name="emp_restday" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_reportto" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_contract_service" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_ot" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_onshift" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_colony" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_inst_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_inst_title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_inst_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_inst_passing_g" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_inst_passing_yr" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_last_company" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_last_position" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_experince" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_last_salary" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="health_id" Type="int" />
+    <Property Name="veh_id" Type="int" />
+    <Property Name="emp_incometax" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_ntn_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_eobi_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_sessi_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_gi_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_graduity" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_pf" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_ref_no" Type="int" />
+    <Property Name="emp_ref_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_ref_mob" Type="int" Nullable="false" />
+    <Property Name="emp_ref_email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="bank_id" Type="int" />
+    <Property Name="emp_acct_no" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_acct_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="emp_iban_no" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_healthinsurance">
+    <Key>
+      <PropertyRef Name="health_id" />
+    </Key>
+    <Property Name="health_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="health_plan_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="health_plan_amount" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_holiday">
+    <Key>
+      <PropertyRef Name="h_id" />
+    </Key>
+    <Property Name="h_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="h_name" Type="varchar" MaxLength="50" />
+    <Property Name="h_date" Type="date" />
+    <Property Name="h_otrates" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_millUnit">
+    <Key>
+      <PropertyRef Name="unit_id" />
+    </Key>
+    <Property Name="unit_id" Type="int" Nullable="false" />
+    <Property Name="unit_name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_nationality">
+    <Key>
+      <PropertyRef Name="nationality_id" />
+    </Key>
+    <Property Name="nationality_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nationality_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_reasons">
+    <Key>
+      <PropertyRef Name="reason_id" />
+    </Key>
+    <Property Name="reason_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="reason_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_religion">
+    <Key>
+      <PropertyRef Name="religion_id" />
+    </Key>
+    <Property Name="religion_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="religion_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_subdepartment">
+    <Key>
+      <PropertyRef Name="sdept_id" />
+    </Key>
+    <Property Name="sdept_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sdept_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sdept_strenght" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dept_id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_terminal">
+    <Key>
+      <PropertyRef Name="terminal_id" />
+    </Key>
+    <Property Name="terminal_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="terminal_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_timing">
+    <Key>
+      <PropertyRef Name="time_id" />
+    </Key>
+    <Property Name="time_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="timing" Type="varchar" MaxLength="50" />
+    <Property Name="timefrom" Type="varchar" MaxLength="50" />
+    <Property Name="timeupto" Type="varchar" MaxLength="50" />
+    <Property Name="outupto" Type="varchar" MaxLength="50" />
+    <Property Name="dutyhours" Type="varchar" MaxLength="50" />
+    <Property Name="shifttype" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_timingGroup">
+    <Key>
+      <PropertyRef Name="tg_id" />
+    </Key>
+    <Property Name="tg_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tg_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tg_shifttype" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_user">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pasword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbl_vehicledetention">
+    <Key>
+      <PropertyRef Name="veh_id" />
+    </Key>
+    <Property Name="veh_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="veh_type_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="veh_type_amount" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_DEPART_ID">
+    <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_department">
+        <PropertyRef Name="dept_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="dept_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DEPT_ID">
+    <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_subdepartment" Type="Self.tbl_subdepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_department">
+        <PropertyRef Name="dept_id" />
+      </Principal>
+      <Dependent Role="tbl_subdepartment">
+        <PropertyRef Name="dept_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESIGNATION_ID">
+    <End Role="tbl_designation" Type="Self.tbl_designation" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_designation">
+        <PropertyRef Name="desig_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="desig_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HEALTH_ID">
+    <End Role="tbl_healthinsurance" Type="Self.tbl_healthinsurance" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_healthinsurance">
+        <PropertyRef Name="health_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="health_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MUNIT_ID">
+    <End Role="tbl_millUnit" Type="Self.tbl_millUnit" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_millUnit">
+        <PropertyRef Name="unit_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="unit_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NATIONALITY_ID">
+    <End Role="tbl_nationality" Type="Self.tbl_nationality" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_nationality">
+        <PropertyRef Name="nationality_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="nationality_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SDEPARTT_ID">
+    <End Role="tbl_subdepartment" Type="Self.tbl_subdepartment" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_subdepartment">
+        <PropertyRef Name="sdept_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="sdept_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIMING_ID">
+    <End Role="tbl_timing" Type="Self.tbl_timing" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_timing">
+        <PropertyRef Name="time_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="time_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TIMINGGROUP_ID">
+    <End Role="tbl_timingGroup" Type="Self.tbl_timingGroup" Multiplicity="0..1" />
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_timingGroup">
+        <PropertyRef Name="tg_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="tg_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UNIT_ID">
+    <End Role="tbl_millUnit" Type="Self.tbl_millUnit" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_department" Type="Self.tbl_department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_millUnit">
+        <PropertyRef Name="unit_id" />
+      </Principal>
+      <Dependent Role="tbl_department">
+        <PropertyRef Name="unit_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehicle_ID">
+    <End Role="tbl_vehicledetention" Type="Self.tbl_vehicledetention" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tbl_employee" Type="Self.tbl_employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_vehicledetention">
+        <PropertyRef Name="veh_id" />
+      </Principal>
+      <Dependent Role="tbl_employee">
+        <PropertyRef Name="veh_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="payroll_dbModelStoreContainer">
+    <EntitySet Name="tbl_bankdetails" EntityType="Self.tbl_bankdetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_department" EntityType="Self.tbl_department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_designation" EntityType="Self.tbl_designation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_employee" EntityType="Self.tbl_employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_healthinsurance" EntityType="Self.tbl_healthinsurance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_holiday" EntityType="Self.tbl_holiday" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_millUnit" EntityType="Self.tbl_millUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_nationality" EntityType="Self.tbl_nationality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_reasons" EntityType="Self.tbl_reasons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_religion" EntityType="Self.tbl_religion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_subdepartment" EntityType="Self.tbl_subdepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_terminal" EntityType="Self.tbl_terminal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_timing" EntityType="Self.tbl_timing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_timingGroup" EntityType="Self.tbl_timingGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_user" EntityType="Self.tbl_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_vehicledetention" EntityType="Self.tbl_vehicledetention" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DEPART_ID" Association="Self.FK_DEPART_ID">
+      <End Role="tbl_department" EntitySet="tbl_department" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DEPT_ID" Association="Self.FK_DEPT_ID">
+      <End Role="tbl_department" EntitySet="tbl_department" />
+      <End Role="tbl_subdepartment" EntitySet="tbl_subdepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESIGNATION_ID" Association="Self.FK_DESIGNATION_ID">
+      <End Role="tbl_designation" EntitySet="tbl_designation" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HEALTH_ID" Association="Self.FK_HEALTH_ID">
+      <End Role="tbl_healthinsurance" EntitySet="tbl_healthinsurance" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MUNIT_ID" Association="Self.FK_MUNIT_ID">
+      <End Role="tbl_millUnit" EntitySet="tbl_millUnit" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NATIONALITY_ID" Association="Self.FK_NATIONALITY_ID">
+      <End Role="tbl_nationality" EntitySet="tbl_nationality" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SDEPARTT_ID" Association="Self.FK_SDEPARTT_ID">
+      <End Role="tbl_subdepartment" EntitySet="tbl_subdepartment" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIMING_ID" Association="Self.FK_TIMING_ID">
+      <End Role="tbl_timing" EntitySet="tbl_timing" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TIMINGGROUP_ID" Association="Self.FK_TIMINGGROUP_ID">
+      <End Role="tbl_timingGroup" EntitySet="tbl_timingGroup" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UNIT_ID" Association="Self.FK_UNIT_ID">
+      <End Role="tbl_millUnit" EntitySet="tbl_millUnit" />
+      <End Role="tbl_department" EntitySet="tbl_department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehicle_ID" Association="Self.FK_vehicle_ID">
+      <End Role="tbl_vehicledetention" EntitySet="tbl_vehicledetention" />
+      <End Role="tbl_employee" EntitySet="tbl_employee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

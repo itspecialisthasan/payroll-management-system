@@ -1,0 +1,127 @@
+﻿@model IEnumerable<BOL.tbl_millUnit>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-md-12 align-content-center justify-content-center m-auto">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>List of Unit Department</h2>
+        </div>
+        <div class="col-md-6">
+            <p style="text-align: right;">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" id="addUnitDepartId">
+                    Add
+                </button>
+            </p>
+
+        </div>
+
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.unit_name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.unit_name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.unit_id, area = "User" }, new { @class = "btn btn-primary", @id = "modalEditUnitDepart" })
+                    @Html.ActionLink("Details", "Details", new { id = item.unit_id }, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.unit_id }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="modalUnitDepart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Unit Department</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @using (Html.BeginForm("Create", "MilliUnit", new { area = "User" }, FormMethod.Post))
+                {
+                    <div class="modal-body">
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            <label>Unit Id</label>
+                            <input type="text" name="unit_id" class="form-control" placeholder="Unit department id" />
+                        </div>
+                        <div class="form-group">
+                            <label>Unit Department Name</label>
+                            <input type="text" name="unit_name" class="form-control" placeholder="Unit department Name" />
+                            @*@Html.TextBoxFor(m => m.unit_name, new {@class = "form-control", @placeholder = "Unit department Name" })*@
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal fade" id="modalEditUnitDepart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Unit Department</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @using (Html.BeginForm("Update", "MilliUnit", new { area = "User" }, FormMethod.Post))
+                {
+                    <div class="modal-body">
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            <label>Unit Id</label>
+                            <input type="text" name="unit_id" class="form-control" placeholder="Unit department id" />
+                        </div>
+                        <div class="form-group">
+                            <label>Unit Department Name</label>
+                            <input type="text" name="unit_name" class="form-control" placeholder="Unit department Name" />
+                            @*@Html.EditorFor(m => m.unit_name, new {@class = "form-control", @placeholder = "Unit department Name" })*@
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/js/jquery/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+    })
+    $('#addUnitDepartId').click(function () {
+        $('#modalUnitDepart').modal('show');
+    })
+</script>

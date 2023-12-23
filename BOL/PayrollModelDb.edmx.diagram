@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b0ec4c86c7254f7c8ed7e3cd8f98c4cb" Name="Diagram1">
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_bankdetails" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_department" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_designation" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_employee" Width="1.5" PointX="7.5" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_healthinsurance" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_holiday" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_millUnit" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_nationality" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_reasons" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_religion" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_subdepartment" Width="1.5" PointX="5.25" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_terminal" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_timing" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_timingGroup" Width="1.5" PointX="5.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_user" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="payroll_dbModel.tbl_vehicledetention" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
+        <AssociationConnector Association="payroll_dbModel.FK_DEPART_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_DEPT_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_UNIT_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_DESIGNATION_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_HEALTH_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_MUNIT_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_NATIONALITY_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_SDEPARTT_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_TIMING_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_TIMINGGROUP_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="payroll_dbModel.FK_vehicle_ID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
